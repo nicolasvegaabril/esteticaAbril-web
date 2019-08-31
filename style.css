@@ -1,0 +1,268 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+header{
+  z-index: 2;
+  display: block;
+  background-color: white;
+  opacity: 0.9;
+  box-shadow: 0 0 10px 0 #bbbbbb; 
+  position: fixed;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+}
+.logo-banner{
+  max-width: 100%;
+}
+.head-logo{
+  max-width: 11%;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  font-family: 'Open Sans', sans-serif;
+}
+.nav-links{
+  display: flex;
+  margin-right: 50px;
+  justify-content: space-around;
+  width: 60%;
+}
+.nav-links li{
+  list-style-type: none;
+}
+.nav-links a{
+  color: black;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 90%;
+  font-weight: bold;
+}
+.burger{
+  display: none;
+  cursor: pointer;
+}
+.burger div{
+width: 25px;
+height: 3px;
+background-color: black;
+margin: 5px;
+transition:  all 0.3s ease;
+}
+.intro-logo{
+  position: absolute;
+  top: 8vh;
+  z-index: -1;
+  opacity: 0.8; 
+}
+.over{
+  position: relative;
+  z-index: 1;
+  max-height: 40vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 26vh;
+  opacity: 0.9;
+  filter:  invert(99%) sepia(5%) saturate(343%) hue-rotate(174deg) brightness(117%) contrast(100%) drop-shadow(2px 2px 0px rgb(0, 0, 0));   
+}
+.introduction{
+  top: 0vh;
+  height: 100vh;
+}
+.introduction-bg{
+  top:0px;
+  position: absolute;
+  z-index: -1;
+  background-image: url("./images/landing2.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: left;
+}
+.button-int{
+  background-color: transparent;
+  border: white ;
+}
+/* stroke effect*/
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: rgb(226, 193, 2);
+}
+nav.stroke ul li a{
+  position: relative;
+}
+nav.stroke ul li a:after{
+  position: absolute;
+  bottom: 0;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1vw;
+  content: '.';
+  color: transparent;
+  background: rgb(90, 90, 90);
+  height: 0.1vh;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+iframe {
+  margin-top: 4vh;
+  margin-left: 9vw;
+  max-width: 100%;
+  margin-bottom: 9vh;
+  width: 80vw;
+  height: 60vh;
+}
+#datos-direccion{
+  margin-top: 15vh;
+  margin-left: 9vw; 
+}
+.logo-ubi{
+  flex-direction: column;
+  float: right;
+  height: 12vh;
+  margin-right: 11vw;
+  opacity: 0.3;
+
+}
+
+#serviciosContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 95vh;
+  padding-top: 5vh;
+  
+}
+.grid-item {
+  height: 37vh;
+  width: 35vw;
+}
+
+.grid-item .derecha{
+  text-align: right;
+  font-size: 3em;
+  padding-right: 1vw;
+  border-bottom: 0.05rem solid rgb(226, 193, 2);
+}
+
+.grid-item .izquierda{
+  text-align: left;
+  font-size: 3em;
+  padding-left: 1vw;
+  border-bottom: 0.05rem solid rgb(226, 193, 2);
+}
+
+.grid-item .imagenSerDer{
+  float: left;
+  height: 30vh;
+  padding-top: 2vh;
+  padding-right: 4vw;
+}
+
+.grid-item .imagenSerIzq{
+  float: right;
+  height: 30vh;
+  padding-top: 2vh;
+  padding-left: 4vw;
+}
+
+
+.textoImagenSerDer{
+  padding-top: 2vh;
+}
+
+@media screen and (max-width: 1024px){
+.nav-links{
+  margin-right: 0px;
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+}
+.logo-banner{
+  max-width: 100%;
+}
+.head-logo{
+  max-width: 19%;
+
+}
+}
+
+@media screen and (max-width: 768px){
+  body{
+    overflow-x: hidden;
+  }
+  .burger{
+    display: block;
+  
+  }
+  .logo-banner{
+    max-width: 100%;
+  }
+  .head-logo{
+    max-width: 15%;
+    min-width: 28%;
+
+  }
+  .nav-links{
+
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li{
+    opacity: 0;
+  }
+  iframe {
+    margin-bottom: 3vh;
+  }
+ 
+}
+.nav-active{
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
