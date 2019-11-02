@@ -202,6 +202,63 @@ iframe {
   max-width: 19%;
 
 }
+.grid-item {
+  height: 45vh;
+  width: 90vw;
+}
+
+.grid-item .derecha{
+  text-align: right;
+  font-size: 3em;
+  padding-right: 1vw;
+  border-bottom: 0.05rem solid rgb(226, 193, 2);
+}
+
+.grid-item .izquierda{
+  text-align: left;
+  font-size: 3em;
+  padding-left: 1vw;
+  border-bottom: 0.05rem solid rgb(226, 193, 2);
+}
+
+.grid-item .imagenSerDer{
+  float: left;
+  height: 30vh;
+  padding-top: 2vh;
+  padding-right: 4vw;
+}
+
+.grid-item .imagenSerIzq{
+  float: right;
+  height: 30vh;
+  padding-top: 2vh;
+  padding-left: 4vw;
+}
+
+.textoImagenSerDer{
+  padding-top: 2vh;
+}
+
+iframe {
+  margin-top: 4vh;
+  margin-left: 9vw;
+  max-width: 100%;
+  margin-bottom: 9vh;
+  width: 80vw;
+  height: 60vh;
+}
+#datos-direccion{
+  margin-top: 100vh;
+  margin-left: 9vw; 
+}
+.logo-ubi{
+  flex-direction: column;
+  float: right;
+  height: 9vh;
+  margin-right: 9vw;
+  opacity: 0.3;
+
+}
 }
 
 @media screen and (max-width: 768px){
