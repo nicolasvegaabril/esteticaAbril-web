@@ -1,8 +1,16 @@
-# esteticaAbril-web
+#  esteticaAbril-web
 
-HOSTED: https://nicolasvegaabril.github.io/esteticaAbril-web/
+Website for a real hair-saloon located in Uruguay.
 
-Responsive website for a real hair-saloon located in Uruguay.
+Key features:
+  - Responsive
+  - Straigth to the point
+  - Great UI
 
-Made using HTML, CSS and Javascript from the ground up without any template.
+### Tech used
 
+This site uses the 3 basics of web development:
+
+* HTML
+* CSS
+* Javascript
